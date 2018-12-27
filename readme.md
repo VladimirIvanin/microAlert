@@ -31,7 +31,7 @@ microAlert('Текст', 3000, {
 // Без модификации
 microAlert('info', 5000);
 // C модификациями
-microAlert('warning', 5000, {modificator: 'warning'});
-microAlert('success', 5000, {modificator: 'success'});
-microAlert('danger', 5000, {modificator: 'danger'});
+microAlert('⚠ warning', 5000, {modificator: 'warning'});
+microAlert('✓ success', 5000, {modificator: 'success'});
+microAlert('⚠ danger', 5000, {modificator: 'danger'});
 ```
