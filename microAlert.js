@@ -1,6 +1,6 @@
 /**
  * https://github.com/VladimirIvanin/microAlert
- * v0.1.0
+ * v0.1.1
  */
 function microAlert(message, user_timeout, options) {
   var timeout = user_timeout || 3000;
@@ -17,12 +17,16 @@ function microAlert(message, user_timeout, options) {
   var uniqClass = 'id-micro-alert' + uniq;
   var $item = $('<div>', {
     class: 'micro-alert-item ' + uniqClass,
-    css: option.css
+    css: option.css,
   });
 
   if (typeof option.modificator == 'string') {
     $item.addClass('is-' + option.modificator);
   }
+
+  $item.on('click', function () {
+    $(this).remove();
+  });
 
   $item.html(message);
 
